@@ -33,6 +33,6 @@ Route::get('/users/{user}/modal', [UserController::class, 'showModal'])->name('u
 Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
 Route::resource('categories', CategoryController::class);
-Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+Route::get('/categories.index', [CategoryController::class, 'index'])->name('categories');
 Route::resource('posts', PostController::class);
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
