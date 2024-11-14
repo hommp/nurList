@@ -19,12 +19,10 @@
                 <td>{{ $category->name }}</td>
                 <td>
                     <a href="{{ route('categories.edit', $category) }}" class="btn btn-sm btn-warning">Edit</a>
-                    <form action="{{ route('categories.destroy', $category) }}" method="POST"
-                        style="display: inline-block;">
+                    <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display: inline-block;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-danger"
-                            onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">Hapus</button>
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">Hapus</button>
                     </form>
                 </td>
             </tr>
