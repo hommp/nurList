@@ -12,11 +12,21 @@ use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::with('category')->latest()->paginate(10);
+        $query = Post::query();
+
+        // Cek apakah ada parameter pencarian
+        if ($request->has('search') && $request->get('search') !== '') {
+            $query->where('title', 'like', '%' . $request->get('search') . '%');
+        }
+
+        // Ambil data postingan dengan pagination
+        $posts = $query->with('category')->paginate(10);
+
         return view('posts.index', compact('posts'));
     }
+
 
 
     public function create()
