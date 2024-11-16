@@ -28,7 +28,7 @@ Home
             @endif
 
 
-            <h2>Heyyo this a home page</h2>
+            <h2>Heyyo this a home page!!!</h2>
         </div>
     </div>
 
