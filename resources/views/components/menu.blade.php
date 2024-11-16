@@ -16,7 +16,7 @@
         <div class="container fw-bold">
             <a class="navbar-brand" href="/" aria-label="Homepage">
                 <img src="https://cdn.freelogovectors.net/wp-content/uploads/2023/09/nike-nocta-logo-freelogovectors.net_.png"
-                    alt="Brand Logo">Yezus
+                    alt="Brand Logo">Yzus
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +38,9 @@
                         <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
                     @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('home') }}">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{{ route('users') }}">Data Users</a>
                     </li>
