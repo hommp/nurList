@@ -62,6 +62,7 @@
                         </div>
                         @csrf
                         <button class="btn btn-primary w-100">Submit</button>
+                        <p class="my-2">have accound ? <a href="{{ route('signin') }}">signin</a></p>
                     </form>
                 </div>
             </div>

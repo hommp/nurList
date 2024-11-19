@@ -58,6 +58,7 @@
                         </div>
                         @csrf
                         <button class="btn btn-primary w-100">Submit</button>
+                        <p class="my-2">dont have accound ? <a href="{{ route('signup') }}">signup</a></p>
                     </form>
                 </div>
             </div>
