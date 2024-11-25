@@ -10,7 +10,7 @@
                 <div class="m-3 justify-content-between">
                     <form action="{{ route('posts') }}" method="GET" class="me-2">
                         <div class="input-group">
-                            <input type="text" name="search" class="form-control" placeholder="Cari Judul Postingan..."
+                            <input type="text" name="search" class="form-control" placeholder="Search Posts"
                                 value="{{ request()->get('search') }}">
                             <button class="btn btn-primary" type="submit">Cari</button>
                         </div>
