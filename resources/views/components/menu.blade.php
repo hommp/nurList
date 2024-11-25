@@ -26,7 +26,7 @@
                 <ul class="navbar-nav me-auto fw-bold">
                     @if (!Auth::check())
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('profile') }}">Profil</a>
@@ -42,17 +42,9 @@
                         <a class="nav-link" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('users') }}">Data Users</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('users') }}">Users</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Data Warga</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about') }}">Data RT/RW</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact') }}">Data Surat</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('categories') }}">Categories</a>
                     </li>

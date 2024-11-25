@@ -58,13 +58,15 @@
                         </div>
                         @csrf
                         <button class="btn btn-primary w-100">Submit</button>
-                        <p class="my-2">dont have accound ? <a href="{{ route('signup') }}">signup</a></p>
+
+                        <p class="my-2">dont have accound ? <a href="{{ route('signup') }}">signup</a><span class="mx-2">Or</span><a class="text-danger" href=" {{ route('home') }}">Cancel</a></p>
                     </form>
+
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
