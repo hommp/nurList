@@ -13,10 +13,14 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::latest()->paginate(10);
-        return view('categories.index', compact('categories'));
+        $search = $request->input('search');
+        $categories = Category::when($search, function ($query, $search) {
+            return $query->where('name', 'like', '%' . $search . '%');
+        })->paginate(10);
+
+        return view('categories.index', compact('categories', 'search'));
     }
 
     /**

@@ -6,13 +6,13 @@
         <div class="col-md-12" style="padding-top: 100px;">
 
             <div class="card">
-                <div class="card-header">Daftar Postingan</div>
+                <div class="card-header bg-dark text-light text-center">Daftar Postingan</div>
                 <div class="m-3 justify-content-between">
-                    <form action="{{ route('posts') }}" method="GET" class="me-2">
-                        <div class="input-group">
-                            <input type="text" name="search" class="form-control" placeholder="Cari Judul Postingan..."
-                                value="{{ request()->get('search') }}">
-                            <button class="btn btn-primary" type="submit">Cari</button>
+                    @auth
+                    <form method="GET" action="{{ route('posts') }}">
+                        <div class="input-group mb-3">
+                            <input type="text" name="search" class="form-control" placeholder="Search users">
+                            <button class="btn btn-primary">Search</button>
                         </div>
                     </form>
                     <a href="{{ route('posts.create') }}" class="btn btn-primary my-3">Tambah Postingan</a>
@@ -23,6 +23,7 @@
                                 <th>Judul</th>
                                 <th>Kategori</th>
                                 <th>Gambar</th>
+                                <th>Created At</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -40,15 +41,16 @@
                                     -
                                     @endif
                                 </td>
+                                <td>{{ $post->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s') }}</td>
                                 <td>
-                                    <a href="{{ route('posts.show', $post) }}" class="btn btn-sm btn-info">Detail</a>
+                                    <a href="{{ route('posts.show', $post) }}" class="btn btn-sm btn-primary">View</a>
                                     <a href="{{ route('posts.edit', $post) }}" class="btn btn-sm btn-warning">Edit</a>
                                     <form action="{{ route('posts.destroy', $post) }}" method="POST"
                                         style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger"
-                                            onclick="return confirm('Apakah Anda yakin ingin menghapus postingan ini?')">Hapus</button>
+                                            onclick="return confirm('Apakah Anda yakin ingin menghapus postingan ini?')">Delete</button>
                                     </form>
                                 </td>
                             </tr>
@@ -57,6 +59,9 @@
                     </table>
                 </div>
                 {{ $posts->links() }}
+                @else
+                <p>You are not logged in. Please <a href="{{ route('signin') }}">log in</a> to view categories.</p>
+                @endauth
             </div>
         </div>
     </div>

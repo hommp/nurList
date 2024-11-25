@@ -28,15 +28,37 @@ Home
             @endif
 
 
-            <h2>Heyyo this a home page!!!</h2>
+            <h1 class="text-center">Heyyo this a home page!!!</h1>
         </div>
     </div>
 
 
+    <div id="carouselExampleAutoplaying" class="carousel slide shadow rounded-2" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-2">
+            @foreach ($posts as $key => $post)
+            <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
+                @if ($post->image)
+                <img src="{{ asset('images/posts/' . $post->image) }}" class="d-block w-100" alt="{{ $post->title }}">
+                @else
+                <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Placeholder Image">
+                @endif
+            </div>
+            @endforeach
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
     <div class="row mt-4">
         @foreach ($posts as $post)
         <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card shadow">
                 @if ($post->image)
                 <img src="{{ asset('images/posts/' . $post->image) }}" class="card-img-top" alt="{{ $post->title }}">
                 @else
