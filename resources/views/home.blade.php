@@ -33,8 +33,8 @@ Home
     </div>
 
 
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+    <div id="carouselExampleAutoplaying" class="carousel slide shadow rounded-2" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-2">
             @foreach ($posts as $key => $post)
             <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
                 @if ($post->image)
@@ -58,7 +58,7 @@ Home
     <div class="row mt-4">
         @foreach ($posts as $post)
         <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card shadow">
                 @if ($post->image)
                 <img src="{{ asset('images/posts/' . $post->image) }}" class="card-img-top" alt="{{ $post->title }}">
                 @else

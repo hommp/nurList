@@ -9,11 +9,10 @@
                 <div class="card-header bg-dark text-light text-center">Daftar Postingan</div>
                 <div class="m-3 justify-content-between">
                     @auth
-                    <form action="{{ route('posts') }}" method="GET" class="me-2">
-                        <div class="input-group">
-                            <input type="text" name="search" class="form-control" placeholder="Search Posts"
-                                value="{{ request()->get('search') }}">
-                            <button class="btn btn-primary" type="submit">Cari</button>
+                    <form method="GET" action="{{ route('posts') }}">
+                        <div class="input-group mb-3">
+                            <input type="text" name="search" class="form-control" placeholder="Search users">
+                            <button class="btn btn-primary">Search</button>
                         </div>
                     </form>
                     <a href="{{ route('posts.create') }}" class="btn btn-primary my-3">Tambah Postingan</a>
@@ -24,6 +23,7 @@
                                 <th>Judul</th>
                                 <th>Kategori</th>
                                 <th>Gambar</th>
+                                <th>Created At</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -41,6 +41,7 @@
                                     -
                                     @endif
                                 </td>
+                                <td>{{ $post->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s') }}</td>
                                 <td>
                                     <a href="{{ route('posts.show', $post) }}" class="btn btn-sm btn-primary">View</a>
                                     <a href="{{ route('posts.edit', $post) }}" class="btn btn-sm btn-warning">Edit</a>
