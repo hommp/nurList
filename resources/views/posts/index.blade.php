@@ -6,7 +6,7 @@
         <div class="col-md-12" style="padding-top: 100px;">
 
             <div class="card">
-                <div class="card-header">Daftar Postingan</div>
+                <div class="card-header bg-dark text-light text-center">Daftar Postingan</div>
                 <div class="m-3 justify-content-between">
                     <form action="{{ route('posts') }}" method="GET" class="me-2">
                         <div class="input-group">
@@ -41,14 +41,14 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('posts.show', $post) }}" class="btn btn-sm btn-info">Detail</a>
+                                    <a href="{{ route('posts.show', $post) }}" class="btn btn-sm btn-primary">View</a>
                                     <a href="{{ route('posts.edit', $post) }}" class="btn btn-sm btn-warning">Edit</a>
                                     <form action="{{ route('posts.destroy', $post) }}" method="POST"
                                         style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger"
-                                            onclick="return confirm('Apakah Anda yakin ingin menghapus postingan ini?')">Hapus</button>
+                                            onclick="return confirm('Apakah Anda yakin ingin menghapus postingan ini?')">Delete</button>
                                     </form>
                                 </td>
                             </tr>

@@ -13,7 +13,7 @@
             @enderror
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
-        <button class="btn btn-primary href=" {{ route('categories') }}>Cancel</button>
+        <a class="btn btn-primary" href="{{ route('categories') }}">Cancel</a>
     </form>
 </div>
 @endsection

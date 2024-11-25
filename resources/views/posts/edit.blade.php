@@ -32,7 +32,10 @@
                 width="200">
             @endif
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+        <div class="">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a class="btn btn-primary mb-3" href="{{ route('posts') }}">Cancel</a>
+        </div>
     </form>
 </div>
 @endsection

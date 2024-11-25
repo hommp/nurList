@@ -9,7 +9,7 @@ Users
     <div class="row justify-content-center">
         <div class="col-md-12" style="padding-top: 100px;">
             <div class="card">
-                <div class="card-header">Users</div>
+                <div class="card-header bg-dark text-light text-center">Users</div>
                 @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
@@ -50,7 +50,7 @@ Users
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
-                                <td>{{ $user->created_at->format('Y-m-d H:i:s') }}</td>
+                                <td>{{ $user->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s') }}</td>
                                 <td>
                                     <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#userModal{{ $user->id }}">

@@ -11,5 +11,6 @@
     <p>No image available</p>
     @endif
     <p>{{ $post->body }}</p>
+    <a class="btn btn-primary mb-3" href="{{ route('home') }}">Cancel</a>
 </div>
 @endsection

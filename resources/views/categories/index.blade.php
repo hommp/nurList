@@ -6,7 +6,7 @@
         <div class="col-md-12" style="padding-top: 100px;">
 
             <div class="card">
-                <div class="card-header">Categories</div>
+                <div class="card-header bg-dark text-light text-center">Categories</div>
                 <div class="m-3 justify-content-between">
                     <form method="GET" action="{{ route('categories.index') }}" class="me-2">
                         <div class="input-group">
@@ -29,11 +29,13 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td>
+
+                                    <a href="{{ route('categories.show', $category) }}" class="btn btn-sm btn-primary">View</a>
                                     <a href="{{ route('categories.edit', $category) }}" class="btn btn-sm btn-warning">Edit</a>
                                     <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">Hapus</button>
+                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">Delete</button>
                                     </form>
                                 </td>
                             </tr>
