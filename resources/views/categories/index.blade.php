@@ -8,6 +8,7 @@
             <div class="card">
                 <div class="card-header bg-dark text-light text-center">Categories</div>
                 <div class="m-3 justify-content-between">
+                    @auth
                     <form method="GET" action="{{ route('categories.index') }}" class="me-2">
                         <div class="input-group">
                             <input type="text" name="search" value="{{ request()->input('search') }}" class="form-control" placeholder="Search Categories">
@@ -29,7 +30,6 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td>
-
                                     <a href="{{ route('categories.show', $category) }}" class="btn btn-sm btn-primary">View</a>
                                     <a href="{{ route('categories.edit', $category) }}" class="btn btn-sm btn-warning">Edit</a>
                                     <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display: inline-block;">
@@ -39,12 +39,14 @@
                                     </form>
                                 </td>
                             </tr>
-
                             @endforeach
                         </tbody>
                     </table>
                 </div>
                 {{ $categories->links() }}
+                @else
+                <p>You are not logged in. Please <a href="{{ route('signin') }}">log in</a> to view categories.</p>
+                @endauth
             </div>
         </div>
     </div>

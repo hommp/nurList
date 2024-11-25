@@ -8,6 +8,7 @@
             <div class="card">
                 <div class="card-header bg-dark text-light text-center">Daftar Postingan</div>
                 <div class="m-3 justify-content-between">
+                    @auth
                     <form action="{{ route('posts') }}" method="GET" class="me-2">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Search Posts"
@@ -57,6 +58,9 @@
                     </table>
                 </div>
                 {{ $posts->links() }}
+                @else
+                <p>You are not logged in. Please <a href="{{ route('signin') }}">log in</a> to view categories.</p>
+                @endauth
             </div>
         </div>
     </div>
