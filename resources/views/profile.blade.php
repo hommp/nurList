@@ -7,7 +7,7 @@ Profile
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-12" style="padding-top: 20px;">
+        <div class="col-md-12" style="padding-top: 100px;">
             <h1>This profile page</h1>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
