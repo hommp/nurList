@@ -1,6 +1,5 @@
 @extends('master.layout')
 
-
 @section('content')
 <div class="container" style="padding-top: 100px;">
     <h1>{{ $post->title }}</h1>
@@ -11,6 +10,6 @@
     <p>No image available</p>
     @endif
     <p>{{ $post->body }}</p>
-    <a class="btn btn-primary mb-3" href="{{ route('home') }}">Cancel</a>
+    <a class="btn btn-primary mb-3" href="javascript:history.back()">Back</a>
 </div>
 @endsection
