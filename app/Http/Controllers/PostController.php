@@ -124,7 +124,19 @@ class PostController extends Controller
 
     public function destroy(Post $post)
     {
+        // Cek apakah ada gambar yang terupload
+        if ($post->image) {
+            // Hapus gambar dari storage
+            $imagePath = public_path('images/posts/' . $post->image);
+            if (file_exists($imagePath)) {
+                unlink($imagePath); // Menghapus file gambar
+            }
+        }
+
+        // Hapus postingan dari database
         $post->delete();
+
+        // Redirect kembali dengan pesan sukses
         return redirect()->route('posts')->with('success', 'Postingan berhasil dihapus.');
     }
 }

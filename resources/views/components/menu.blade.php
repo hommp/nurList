@@ -1,29 +1,16 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-    nav {
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .navbar-brand img {
-        width: 50px;
-        height: auto;
-    }
-</style>
-
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
-        <div class="container fw-bold">
-            <a class="navbar-brand" href="/" aria-label="Homepage">
-                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2023/09/nike-nocta-logo-freelogovectors.net_.png"
-                    alt="Brand Logo">Yzus
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" aria-label="Homepage">
+                <img src="{{ asset('images/logo/logo.png') }}" alt="Brand Logo" width="50" height="auto">look
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto fw-bold">
+                <ul class="navbar-nav mx-auto fw-bold">
+                    <!-- Use mx-auto to center the nav items -->
                     @if (!Auth::check())
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>

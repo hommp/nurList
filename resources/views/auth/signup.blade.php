@@ -6,33 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            /* Light background color */
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .signup-container {
-            margin-top: 100px;
-        }
-
-        .signup-card {
-            padding: 30px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-    </style>
 </head>
 
-<body>
+<body class="bg-light">
     <div class="container">
-        <div class="row justify-content-center signup-container">
+        <div class="row justify-content-center mt-5">
             <div class="col-md-4">
-                <div class="signup-card">
+                <div class="card p-4 shadow">
                     <h3 class="text-center">Signup</h3>
                     @if(session('success'))
                     <div class="alert alert-success">
@@ -62,7 +42,8 @@
                         </div>
                         @csrf
                         <button class="btn btn-primary w-100">Submit</button>
-                        <p class="my-2">have accound ? <a href="{{ route('signin') }}">Signin</a><span class="mx-2">Or</span><a class="text-danger" href=" {{ route('home') }}">Cancel</a></p>
+                        <p class="my-2">Have an account? <a href="{{ route('signin') }}">Signin</a><span
+                                class="mx-2">Or</span><a class="text-danger" href="{{ route('home') }}">Cancel</a></p>
                     </form>
                 </div>
             </div>
