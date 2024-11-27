@@ -7,7 +7,7 @@ Home
 
 
 @section('content')
-<div class="container" style="padding-top: 100px;">
+<div class="container my-[100px]" style="margin-top: 100px; margin-bottom: 100px;">
     <div class="row">
         <div class="col-md-12">
             @if (session('success'))
@@ -27,8 +27,7 @@ Home
             </div>
             @endif
 
-
-            <h1 class="text-center">Pick your outfit!</h1>
+            <h1 class="text-center mb-5">Pick your outfit!</h1>
         </div>
     </div>
 
