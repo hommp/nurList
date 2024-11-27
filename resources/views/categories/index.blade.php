@@ -32,12 +32,16 @@
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s') }}</td>
                                 <td>
-                                    <a href="{{ route('categories.show', $category) }}" class="btn btn-sm btn-primary">View</a>
-                                    <a href="{{ route('categories.edit', $category) }}" class="btn btn-sm btn-warning">Edit</a>
-                                    <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display: inline-block;">
+                                    <a href="{{ route('categories.show', $category) }}"
+                                        class="btn btn-sm btn-primary m-1">View</a>
+                                    <a href="{{ route('categories.edit', $category) }}"
+                                        class="btn btn-sm btn-warning m-1">Edit</a>
+                                    <form action="{{ route('categories.destroy', $category) }}" method="POST"
+                                        style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">Delete</button>
+                                        <button type="submit" class="btn btn-sm btn-danger m-1"
+                                            onclick="return confirm('Apakah Anda yakin ingin menghapus kategori ini?')">Delete</button>
                                     </form>
                                 </td>
                             </tr>

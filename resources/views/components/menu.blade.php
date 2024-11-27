@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" aria-label="Homepage">
+            <a class="navbar-brand" href="/" aria-label="Homepage">
                 <img src="{{ asset('images/logo/logo.png') }}" alt="Brand Logo" width="50" height="auto">look
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

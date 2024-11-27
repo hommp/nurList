@@ -43,13 +43,15 @@
                                 </td>
                                 <td>{{ $post->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s') }}</td>
                                 <td>
-                                    <a href="{{ route('posts.show', $post) }}" class="btn btn-sm btn-primary">View</a>
-                                    <a href="{{ route('posts.edit', $post) }}" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="{{ route('posts.show', $post) }}"
+                                        class="btn btn-sm btn-primary m-1">View</a>
+                                    <a href="{{ route('posts.edit', $post) }}"
+                                        class="btn btn-sm btn-warning m-1">Edit</a>
                                     <form action="{{ route('posts.destroy', $post) }}" method="POST"
                                         style="display: inline-block;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger"
+                                        <button type="submit" class="btn btn-sm btn-danger m-1"
                                             onclick="return confirm('Apakah Anda yakin ingin menghapus postingan ini?')">Delete</button>
                                     </form>
                                 </td>

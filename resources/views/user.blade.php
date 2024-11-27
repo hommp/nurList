@@ -52,11 +52,11 @@ Users
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s') }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-sm btn-primary m-1" data-bs-toggle="modal"
                                         data-bs-target="#userModal{{ $user->id }}">
                                         View
                                     </button>
-                                    <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
+                                    <button type="button" class="btn btn-sm btn-warning m-1" data-bs-toggle="modal"
                                         data-bs-target="#editUserModal{{ $user->id }}">
                                         Edit
                                     </button>
@@ -64,7 +64,7 @@ Users
                                         class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-sm btn-danger"
+                                        <button type="submit" class="btn btn-sm btn-danger m-1"
                                             onclick="return confirm('Apakah yakin ingin menghapus data?')">
                                             Delete
                                         </button>
