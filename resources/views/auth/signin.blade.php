@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signin</title>
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
-
 </head>
 
 <body class="bg-light">
     <div class="container">
-        <div class="row justify-content-center" style="margin-top: 100px;">
+        <div class="row justify-content-center mt-5">
             <div class="col-md-4">
                 <div class="card p-4 shadow">
                     <h3 class="text-center">Signin</h3>
