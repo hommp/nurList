@@ -33,12 +33,14 @@ Home
     </div>
 
 
-    <div id="carouselExampleAutoplaying" class="carousel slide shadow rounded-2" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide shadow rounded-2 border border-dark"
+        data-bs-ride="carousel">
         <div class="carousel-inner rounded-2">
             @foreach ($posts as $key => $post)
             <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
                 @if ($post->image)
-                <img src="{{ asset('images/posts/' . $post->image) }}" class="d-block w-100" alt="{{ $post->title }}">
+                <img src="{{ asset('images/posts/' . $post->image) }}" class="d-block w-100"
+                    style="width: 800px; height: 400px; object-fit: cover;" alt="{{ $post->title }}">
                 @else
                 <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Placeholder Image">
                 @endif
@@ -60,7 +62,7 @@ Home
     <div class="row mt-4">
         @foreach ($posts as $post)
         <div class="col-md-4 mb-4">
-            <div class="card shadow">
+            <div class="card shadow border border-dark">
                 @if ($post->image)
                 <img src="{{ asset('images/posts/' . $post->image) }}" class="card-img-top" alt="{{ $post->title }}">
                 @else
