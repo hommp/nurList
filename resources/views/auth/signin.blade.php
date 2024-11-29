@@ -39,8 +39,8 @@
                         @csrf
                         <button class="btn btn-primary w-100">Submit</button>
 
-                        <p class="my-2">Don't have an account? <a href="{{ route('signup') }}">Signup</a><span
-                                class="mx-2">Or</span><a class="text-danger" href="{{ route('home') }}">Cancel</a></p>
+                        <p class="my-2">Don't have an account? <a href="{{ route('signup') }}">Signup</a>
+                        </p><a class="btn btn-secondary" href="{{ route('home') }}">Cancel</a>
                     </form>
 
                 </div>
