@@ -1,15 +1,16 @@
 @extends('master.layout')
 
 @section('content')
-<div class="bg-light">
-    <div class="container">
-        <div class="row justify-content-center" style="margin-top: 100px; margin-bottom: 100px;">
-            <div class="col-md-8">
-                <div class="card p-4 shadow">
+<div class="">
+    <div class="">
+        <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+            <div class="">
+                <div class="p-4">
                     <h1>{{ $post->title }}</h1>
-                    <p>Kategori: {{ $post->category->name }}</p>
+                    <p class="pb-4">Kategori: {{ $post->category->name }}</p>
                     @if ($post->image)
-                    <img src="{{ asset('images/posts/' . $post->image) }}" alt="{{ $post->title }}" class="img-fluid">
+                    <img src="{{ asset('images/posts/' . $post->image) }}" alt="{{ $post->title }}"
+                        class="img-fluid pb-4">
                     @else
                     <p>No image available</p>
                     @endif

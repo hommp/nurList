@@ -42,7 +42,7 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->to('/')->with('success', 'Login success!');
+            return redirect()->to('/');
         }
         return redirect()->back()->withErrors([
             'name' => 'login fail!'
