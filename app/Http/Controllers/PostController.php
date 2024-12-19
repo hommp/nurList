@@ -64,7 +64,7 @@ class PostController extends Controller
         ]);
 
 
-        return redirect()->route('posts')->with('success', 'Postingan berhasil ditambahkan.');
+        return redirect()->route('posts')->with('success', 'Posts addet.');
     }
 
 
@@ -118,7 +118,7 @@ class PostController extends Controller
         ]);
 
 
-        return redirect()->route('posts')->with('success', 'Postingan berhasil diupdate.');
+        return redirect()->route('posts')->with('success', 'Posts updated.');
     }
 
 
@@ -137,6 +137,6 @@ class PostController extends Controller
         $post->delete();
 
         // Redirect kembali dengan pesan sukses
-        return redirect()->route('posts')->with('success', 'Postingan berhasil dihapus.');
+        return redirect()->route('posts')->with('success', 'Posts deleted.');
     }
 }

@@ -14,7 +14,6 @@ use App\Http\Controllers\PostController;
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'show'])->name('about');
-Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
 Route::get('/contact', [ContactController::class, 'show'])->name('contact');
 
 //Auth

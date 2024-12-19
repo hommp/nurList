@@ -1,25 +1,22 @@
 @extends('master.layout')
 
 @section('content')
-<div class="">
-    <div class="">
-        <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
-            <div class="">
-                <div class="p-4">
-                    <h1>{{ $post->title }}</h1>
-                    <p class="pb-4">Kategori: {{ $post->category->name }}</p>
+    <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-dark text-light">{{ $post->title }}</div>
+                    <p class="m-3 mb-0 text-center rounded">Categories: {{ $post->category->name }}</p>
                     @if ($post->image)
-                    <img src="{{ asset('images/posts/' . $post->image) }}" alt="{{ $post->title }}"
-                        class="img-fluid pb-4">
+                        <img src="{{ asset('images/posts/' . $post->image) }}" alt="{{ $post->title }}"
+                            class="img-fluid m-3 rounded mb-0">
                     @else
-                    <p>No image available</p>
+                        <p>No image available</p>
                     @endif
-                    <p>{{ $post->body }}</p>
-                    <a class="btn btn-primary mb-3" href="javascript:history.back()">Back</a>
+                    <p class="m-3 mb-0 border p-3 rounded">{{ $post->body }}</p>
+                    <a class="btn btn-dark m-3" href="javascript:history.back()">Back</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
 @endsection

@@ -50,7 +50,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->name),
         ]);
 
-        return redirect()->route('categories.index')->with('success', 'Kategori berhasil ditambahkan.');
+        return redirect()->route('categories.index')->with('success', 'Categories addet.');
     }
 
     /**
@@ -93,7 +93,7 @@ class CategoryController extends Controller
             'slug' => Str::slug($request->name),
         ]);
 
-        return redirect()->route('categories.index')->with('success', 'Kategori berhasil diupdate.');
+        return redirect()->route('categories.index')->with('success', 'Categories updated.');
     }
 
     /**
@@ -105,6 +105,6 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route('categories.index')->with('success', 'Kategori berhasil dihapus.');
+        return redirect()->route('categories.index')->with('success', 'Categories deleted.');
     }
 }

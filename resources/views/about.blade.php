@@ -1,23 +1,48 @@
 @extends('master.layout')
 
 @section('title')
-Who We Are
+    About
 @endsection
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12" style="padding-top: 100px;">
-            <h1>Who We Are</h1>
-            <p>Welcome to [Agency Name], where creativity meets strategy. We are a team of innovative thinkers and
-                doers, dedicated to helping brands tell their stories and connect with their audiences.</p>
-            <h2>Our Approach</h2>
-            <p>We believe in a collaborative process that combines your vision with our expertise. From branding to
-                digital marketing, we tailor our services to meet your unique needs.</p>
-            <h2>Our Work</h2>
-            <p>Check out our portfolio to see how we've helped clients achieve their goals through creative solutions.
-            </p>
+    <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center mb-4">About Us</h2>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h1>Welcome to [App Name]</h1>
+                        <p>Your ultimate task management solution designed to help you stay organized and boost your
+                            productivity.</p>
+
+                        <h3>Our Story</h3>
+                        <p>Founded in [Year], [App Name] was created out of a passion for helping individuals and teams
+                            streamline their workflows. Our team consists of dedicated professionals who understand the
+                            challenges of juggling multiple tasks and the importance of staying on top of your
+                            responsibilities.</p>
+
+                        <h3>What We Offer</h3>
+                        <ul>
+                            <li><strong>Intuitive Interface:</strong> Our app is designed with simplicity in mind, making it
+                                easy for anyone to use, regardless of their tech-savviness.</li>
+                            <li><strong>Customizable Features:</strong> Tailor your task lists, set priorities, and
+                                deadlines that fit your unique workflow.</li>
+                            <li><strong>Collaboration Tools:</strong> Work seamlessly with your team by sharing tasks,
+                                assigning responsibilities, and tracking progress in real-time.</li>
+                            <li><strong>Cross-Platform Access:</strong> Whether you’re on your computer, tablet, or
+                                smartphone, you can access your tasks anytime, anywhere.</li>
+                        </ul>
+
+                        <h3>Our Vision</h3>
+                        <p>We envision a world where everyone can achieve their goals without the stress of disorganization.
+                            With [App Name], we aim to empower users to take control of their tasks and maximize their
+                            productivity.</p>
+
+                        <p>Thank you for choosing [App Name]. We’re excited to be part of your journey towards better task
+                            management!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 @endsection
