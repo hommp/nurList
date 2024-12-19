@@ -21,7 +21,7 @@ class UserController extends Controller
         }
 
 
-        return view('user', compact('users'));
+        return view('users.user', compact('users'));
     }
 
 
