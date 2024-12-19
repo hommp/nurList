@@ -5,7 +5,6 @@
     Home
 @endsection
 
-
 @section('content')
     <div class="container my-[100px]" style="margin-top: 100px; margin-bottom: 100px;">
         <div class="row">
@@ -27,7 +26,7 @@
                     </div>
                 @endif
 
-                <h1 class="text-center mb-5">ya</h1>
+                <h1 class="text-center mb-5">Remember yor work</h1>
             </div>
         </div>
 
@@ -42,9 +41,13 @@
                         @else
                             <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Placeholder Image">
                         @endif
+                        <div class="p-3 bg-dark text-light text-center">
+                            <h5>{{ $post->title }}</h5>
+                        </div>
                     </div>
                 @endforeach
             </div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,9 +60,13 @@
             </button>
         </div>
 
+
+
+        <h1 class="text-center m-5">All work</h1>
+
         <div class="row mt-4">
             @foreach ($posts as $post)
-                <div class="col-md-4 mb-4">
+                <div class="col-md-6 mb-4">
                     <div class="card shadow">
                         @if ($post->image)
                             <img src="{{ asset('images/posts/' . $post->image) }}" class="card-img-top"

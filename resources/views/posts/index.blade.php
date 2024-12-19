@@ -38,7 +38,7 @@
                                         <th>Title</th>
                                         <th>Categories</th>
                                         <th>Image</th>
-                                        {{-- <th>Created At</th> --}}
+                                        <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -56,7 +56,7 @@
                                                     -
                                                 @endif
                                             </td>
-                                            {{-- <td>{{ $post->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s') }}</td> --}}
+                                            <td>{{ $post->created_at->timezone('Asia/Jakarta')->format('Y-m-d H:i:s') }}</td>
                                             <td>
                                                 <a href="{{ route('posts.show', $post) }}"
                                                     class="btn btn-sm btn-primary m-1">View</a>
