@@ -25,10 +25,6 @@
                         <ul>
                             <li><strong>Intuitive Interface:</strong> Our app is designed with simplicity in mind, making it
                                 easy for anyone to use, regardless of their tech-savviness.</li>
-                            <li><strong>Customizable Features:</strong> Tailor your task lists, set priorities, and
-                                deadlines that fit your unique workflow.</li>
-                            <li><strong>Collaboration Tools:</strong> Work seamlessly with your team by sharing tasks,
-                                assigning responsibilities, and tracking progress in real-time.</li>
                             <li><strong>Cross-Platform Access:</strong> Whether you’re on your computer, tablet, or
                                 smartphone, you can access your tasks anytime, anywhere.</li>
                         </ul>
