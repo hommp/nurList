@@ -1,6 +1,5 @@
 @extends('master.layout')
 
-
 @section('title')
     Home
 @endsection
@@ -15,7 +14,6 @@
                     </div>
                 @endif
 
-
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -26,10 +24,9 @@
                     </div>
                 @endif
 
-                <h1 class="text-center mb-5">Remember yor work</h1>
+                <h1 class="text-center mb-5">Remember your work</h1>
             </div>
         </div>
-
 
         <div id="carouselExampleAutoplaying" class="carousel slide shadow rounded-2" data-bs-ride="carousel">
             <div class="carousel-inner rounded-2">
@@ -37,11 +34,11 @@
                     <div class="carousel-item {{ $key === 0 ? 'active' : '' }}">
                         @if ($post->image)
                             <img src="{{ asset('images/posts/' . $post->image) }}" class="d-block w-100"
-                                style="width: 800px; height: 400px; object-fit: cover;" alt="{{ $post->title }}">
+                                style="width: 100%; height: 400px; object-fit: cover;" alt="Image for {{ $post->title }}">
                         @else
                             <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Placeholder Image">
                         @endif
-                        <div class="p-3 bg-dark text-light text-center">
+                        <div class="carousel-caption bg-dark bg-opacity-50 rounded-2 p-2">
                             <h5>{{ $post->title }}</h5>
                         </div>
                     </div>
@@ -60,8 +57,6 @@
             </button>
         </div>
 
-
-
         <h1 class="text-center m-5">All work</h1>
 
         <div class="row mt-4">
@@ -70,7 +65,7 @@
                     <div class="card shadow">
                         @if ($post->image)
                             <img src="{{ asset('images/posts/' . $post->image) }}" class="card-img-top"
-                                style=" height: 200px; object-fit: cover;" alt="{{ $post->title }}">
+                                style="height: 200px; object-fit: cover;" alt="Image for {{ $post->title }}">
                         @else
                             <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Placeholder Image">
                         @endif
