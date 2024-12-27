@@ -13,27 +13,29 @@
                     <div class="card-body">
                         <ul class="list-unstyled m-3">
                             <li class="mb-3">
-                                <a href="https://www.instagram.com/" target="_blank" class="text-decoration-none text-dark">
+                                <a href="https://www.instagram.com/instagram" target="_blank"
+                                    class="text-decoration-none text-dark">
                                     <i class="bi bi-instagram fs-4"></i> Instagram
                                 </a>
                             </li>
                             <li class="mb-3">
-                                <a href="https://www.facebook.com/" target="_blank" class="text-decoration-none text-dark">
+                                <a href="https://www.facebook.com/facebook" target="_blank"
+                                    class="text-decoration-none text-dark">
                                     <i class="bi bi-facebook fs-4"></i> Facebook
                                 </a>
                             </li>
                             <li class="mb-3">
-                                <a href="https://x.com/" target="_blank" class="text-decoration-none text-dark">
+                                <a href="https://x.com/x" target="_blank" class="text-decoration-none text-dark">
                                     <i class="bi bi-twitter fs-4"></i> Twitter
                                 </a>
                             </li>
                             <li class="mb-3">
-                                <a href="mailto:youremail@example.com" class="text-decoration-none text-dark">
+                                <a href="mailto:nursyahit175@gmail.com" class="text-decoration-none text-dark">
                                     <i class="bi bi-envelope fs-4"></i> Email
                                 </a>
                             </li>
                             <li class="">
-                                <a href="https://github.com/" target="_blank" class="text-decoration-none text-dark">
+                                <a href="https://github.com/hommp" target="_blank" class="text-decoration-none text-dark">
                                     <i class="bi bi-github fs-4"></i> GitHub
                                 </a>
                             </li>
