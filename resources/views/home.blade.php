@@ -24,7 +24,7 @@
                     </div>
                 @endif
 
-                <h1 class="text-center mb-5">Remember your work</h1>
+                <h1 class="text-center mb-5">Remember your task</h1>
             </div>
         </div>
 
@@ -57,12 +57,12 @@
             </button>
         </div>
 
-        <h1 class="text-center m-5">All work</h1>
+        <h1 class="text-center m-5">All task</h1>
 
         <div class="row mt-4">
             @foreach ($posts as $post)
                 <div class="col-md-6 mb-4">
-                    <div class="card shadow">
+                    <div class="card shadow position-relative">
                         @if ($post->image)
                             <img src="{{ asset('images/posts/' . $post->image) }}" class="card-img-top"
                                 style="height: 200px; object-fit: cover;" alt="Image for {{ $post->title }}">
@@ -73,10 +73,102 @@
                             <h2 class="card-title">{{ $post->title }}</h2>
                             <p class="card-text">{{ Str::limit($post->body, 100) }}</p>
                             <a href="{{ route('posts.show', $post) }}" class="btn btn-dark">Read more</a>
+                            <button class="btn btn-success">Task done</button>
+                            <button class="btn btn-danger cancel-btn">Cancel</button>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.btn-success').forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.card');
+                        const doneBadge = document.createElement('span');
+                        doneBadge.className =
+                            'badge bg-success position-absolute top-0 end-0 m-2 px-5 py-2';
+                        doneBadge.innerText = 'Done';
+                        card.appendChild(doneBadge);
+                    });
+                });
+
+                document.querySelectorAll('.cancel-btn').forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.card');
+                        const doneBadge = card.querySelector('.badge.bg-success');
+                        if (doneBadge) {
+                            doneBadge.remove();
+                        }
+                    });
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.btn-success').forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.card');
+                        const doneBadge = document.createElement('span');
+                        doneBadge.className =
+                            'badge bg-success position-absolute top-0 end-0 m-2 px-5 py-2';
+                        doneBadge.innerText = 'Done';
+                        card.appendChild(doneBadge);
+
+                        this.style.display = 'none';
+                        card.querySelector('.btn-dark').style.display = 'none';
+                    });
+                });
+
+                document.querySelectorAll('.cancel-btn').forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.card');
+                        const doneBadge = card.querySelector('.badge.bg-success');
+                        if (doneBadge) {
+                            doneBadge.remove();
+                        }
+
+                        card.querySelector('.btn-success').style.display = 'inline-block';
+                        card.querySelector('.btn-dark').style.display = 'inline-block';
+                    });
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.btn-success').forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.card');
+                        const doneBadge = document.createElement('span');
+                        doneBadge.className =
+                            'badge bg-success position-absolute top-0 end-0 m-2 px-5 py-2';
+                        doneBadge.innerText = 'Done';
+                        card.appendChild(doneBadge);
+
+                        this.style.display = 'none';
+                        card.querySelector('.btn-dark').style.display = 'none';
+                        card.querySelector('.cancel-btn').style.display = 'inline-block';
+                    });
+                });
+
+                document.querySelectorAll('.cancel-btn').forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        const card = this.closest('.card');
+                        const doneBadge = card.querySelector('.badge.bg-success');
+                        if (doneBadge) {
+                            doneBadge.remove();
+                        }
+
+                        card.querySelector('.btn-success').style.display = 'inline-block';
+                        card.querySelector('.btn-dark').style.display = 'inline-block';
+                        this.style.display = 'none';
+                    });
+                });
+
+                document.querySelectorAll('.cancel-btn').forEach(function(button) {
+                    button.style.display = 'none';
+                });
+            });
+        </script>
     </div>
 @endsection
